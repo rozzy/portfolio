@@ -11,7 +11,7 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="jquery-1.3.2.min.js"></script>
     <script type="text/javascript">
-      playShadows=function(e,t){m=2.534345;s1m=10;s2m=7;v=t?{x:1.5,y:.95}:{x:1,y:.45};e.x=e.x>v.x?v.x:e.x;e.x=e.x<-v.x?-v.x:e.x;e.y=e.y>v.y?v.y:e.y;e.y=e.y<-v.y?-v.y:e.y;$("#s1").css({marginTop:e.y*s1m,marginLeft:e.x*s1m});$("#s2").css({marginTop:-e.y*s2m,marginLeft:-e.x*s2m});$("#m").css({marginTop:e.y*m,marginLeft:e.x*m})};gyro.frequency=1;gyro.startTracking(function(e){if(e.x!=null)playShadows(e,true)});$(window).mousemove(function(e){target=$("div#m");e.tX=target.offset().left+target.width()/2;e.tY=target.offset().top+target.height()/2;sb=.018;playShadows({x:sb*(e.tX-e.clientX),y:sb*(e.tY-e.clientY)},false)})
+      playShadows=function(e,t){m=2.534345;s1m=10;s2m=7;v=t?{x:1.5,y:.95}:{x:1,y:.45};e.x=e.x>v.x?v.x:e.x;e.x=e.x<-v.x?-v.x:e.x;e.y=e.y>v.y?v.y:e.y;e.y=e.y<-v.y?-v.y:e.y;$("#s1").css({marginTop:e.y*s1m,marginLeft:e.x*s1m});$("#s2").css({marginTop:-e.y*s2m,marginLeft:-e.x*s2m});$("#m").css({marginTop:e.y*m,marginLeft:e.x*m})};gyro.frequency=1;gyro.startTracking(function(e){if(e.x!=null)playShadows(e,true)});$(window).mousemove(function(e){target=$("div#m");e.tX=target.offset().left+target.width()/2;e.tY=target.offset().top+target.height()/2;sb=.018;playShadows({x:sb*(e.tX-e.clientX),y:sb*(e.tY-e.clientY)},false)}); (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-43374825-1', 'nikitin.pw');ga('send', 'pageview');
     </script>
   </head>
   <body>
@@ -27,14 +27,5 @@
       </div>
     </div>
   </body>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-43374825-1', 'nikitin.pw');
-  ga('send', 'pageview');
-
-</script>
 </html>
