@@ -1,3 +1,10 @@
+require 'rubygems'
+require 'sinatra'
+require 'slim'
+require 'compass'
+require 'town'
+require 'yaml'
+require 'coffee-script'
 require "./app"
 
 configure do

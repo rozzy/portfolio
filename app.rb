@@ -1,9 +1,4 @@
-require 'rubygems'
-require 'sinatra'
-require 'slim'
-require 'compass'
-require 'town'
-require 'coffee-script'
+# app.rb
 
 class Blog < Sinatra::Application
   # Routes:
@@ -36,24 +31,23 @@ class Blog < Sinatra::Application
   end
  
   # Methods:
-  def setTitle title
+  def setTitle title = "Blog"
     @title = title
   end
 
   def getItems # Get all posts
-    Dir.glob settings.posts + "/*.md"
-
+    Dir.glob settings.posts + "/[^@]*.{md,markdown,mdown,txt,html,slim}"
   end
 
-  def showPosts page # Show posts on page
-    posts = getItems '/';
+  def showPosts page = 0 # Show posts on page
+    posts = getItems
     @all_posts = posts.count
     @pages = (@all_posts/settings.per_page).ceil
 
   end
 
   def showPages page
-    @pages
+    #@pages
   end
 
 end
