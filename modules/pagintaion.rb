@@ -1,9 +1,10 @@
 module Pagination
   def set_page num
-    @page = num
+    @page = num == 0 ? 1 : num
     @archive = get_items
     @all_posts = @archive.count
     @pages_num = count_pages
+    redirect '/' if @page > @pages_num
     @actual_pages = trim_posts
   end
 
@@ -18,8 +19,3 @@ module Pagination
     @archive
   end
 end
-
-# 7 posts
-# 1p: 3posts
-# 2p: 3posts  <--- here || begin: (@page-1)*@per_page; end: (@all_pages-@page)*@per_page
-# 3p: 1posts
