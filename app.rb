@@ -6,6 +6,7 @@ require 'compass'
 require 'town'
 require 'yaml'
 require 'coffee-script'
+require 'builder'
 
 configure do
   set :environment, :development
