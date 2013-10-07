@@ -38,18 +38,17 @@ configure do
 end
 
 class Blog < Sinatra::Application
-  register Sinatra::Routes
 
-  def setTitle title = "Blog"
+  def set_title title = "Blog"
     @title = title
   end
 
-  def getItems # Get all posts
+  def get_items # Get all posts
     Dir.glob settings.posts + "[^@]*.{md,markdown,mdown,txt,html,slim}"
   end
 
-  def showPosts page = 0 # Show posts on page
-    archive = getItems
+  def show_posts page = 0 # Show posts on page
+    archive = get_items
     @all_posts = archive.count
     @pages = (@all_posts/settings.per_page).ceil
     posts = []
@@ -74,7 +73,7 @@ class Blog < Sinatra::Application
     data
   end
 
-  def showPages page
+  def show_pages page
     #@pages
   end
 
