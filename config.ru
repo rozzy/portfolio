@@ -19,6 +19,9 @@ configure do
   set :posts, "posts/"
   set :per_page, 5
   set :show_full_post, true
+  set :helpers, "/helpers/"
+  
+  Dir[settings.helpers+"*.rb"].each {|file| require file if file.exists? }
 
   Slim::Engine.set_default_options pretty: (settings.environment == :development ? true : false), sort_attrs: true
 
