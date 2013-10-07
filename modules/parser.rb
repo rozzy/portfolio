@@ -8,11 +8,8 @@ module Parser
   end
 
   def show_posts page = 0 # Show posts on page
-    archive = get_items
-    @all_posts = archive.count
-    @pages = (@all_posts/settings.per_page).ceil
     posts = []
-    for post in archive
+    for post in @archive
       posts.push parse post
     end 
     posts

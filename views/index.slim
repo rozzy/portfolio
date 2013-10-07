@@ -2,7 +2,9 @@
 
 - posts = show_posts(@page)
 - for item in posts
-    == item[:time]
+    == item[:url]
+    br
+    b == item[:time]
     br
     == item[:meta]["title"]
     br
@@ -11,5 +13,4 @@
     == item[:meta]["tags"]
     br
     br
-
 == show_pages @page

@@ -15,11 +15,11 @@ configure do
   set :views, Proc.new { File.join(root, "views/") }
   set :public_folder, Proc.new { File.join(root, "public") }
   
-  set :styles, Proc.new { File.join(root, "styles/") }
-  set :scripts, Proc.new { File.join(root, "scripts/") }
+  set :styles, "styles/"
+  set :scripts, "scripts/"
   set :posts, Proc.new { File.join(root, "posts/") }
-  set :helpers, Proc.new { File.join(root, "helpers/") }
-  set :per_page, 5
+  set :helpers, Proc.new { File.join(root, "modules/") }
+  set :per_page, 2
   set :show_full_post, true
 
   Slim::Engine.set_default_options pretty: (settings.environment == :development ? true : false), sort_attrs: true
@@ -40,9 +40,10 @@ Dir["#{settings.helpers}*.rb"].each {|file| require_relative settings.helpers + 
 
 class Blog < Sinatra::Application
   include Parser
+  include Pagination
 
   get '/' do
-    @page = 1
+    set_page 1
     slim :index, :layout => true
   end
 
@@ -50,20 +51,22 @@ class Blog < Sinatra::Application
     builder :feed
   end
 
-  get '/~(\d)' do |page|
-    @page = page
+  get %r{/~([0-9]+)} do |page|
+    set_page page.to_i
     slim :index, :layout => true
   end
+  
+  include Pagination
 
   get '/*.css' do |file|
-    if File.exists? "#{settings.views+settings.styles+file}.sass"
+    if File.exists? "#{settings.views}#{settings.styles}#{file}.sass"
       content_type 'text/css', :charset => 'utf-8'
       sass :"#{settings.styles}/#{file}"
     else redirect '/' end
   end
 
   get '/*.js' do |file|
-    if File.exists? "#{settings.views+settings.scripts+file}.coffee"
+    if File.exists? "#{settings.views}#{settings.scripts}#{file}.coffee"
       content_type 'text/javascript', :charset => 'utf-8'
       coffee :"#{settings.scripts}/#{file}"
     else redirect '/' end
