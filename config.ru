@@ -7,6 +7,12 @@ configure do
   set :views, Proc.new { File.join(root, "views/") }
   set :public_folder, Proc.new { File.join(root, "public") }
   
+  set :styles, "styles/"
+  set :scripts, "scripts/"
+  set :posts, "posts/"
+  set :per_page, 5
+  set :show_full_post, true
+
   Slim::Engine.set_default_options pretty: (settings.environment == :development ? true : false), sort_attrs: true
 
   Compass.configuration do |config|
