@@ -19,7 +19,7 @@ configure do
   set :scripts, "scripts/"
   set :posts, Proc.new { File.join(root, "posts/") }
   set :helpers, Proc.new { File.join(root, "modules/") }
-  set :per_page, 2
+  set :per_page, 1
   set :show_full_post, true
 
   Slim::Engine.set_default_options pretty: (settings.environment == :development ? true : false), sort_attrs: true

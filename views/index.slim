@@ -1,5 +1,8 @@
 - set_title 'Blog'
-
+- if @page > 1
+  a href="/~#{@page-1}" &uarr; Up
+  br
+  br
 - posts = show_posts(@page)
 - for item in posts
     == item[:url]
@@ -13,4 +16,7 @@
     == item[:meta]["tags"]
     br
     br
-== show_pages @page
+- if @page < @pages_num
+  a href="/~#{@page+1}" &darr; More
+  br
+  br

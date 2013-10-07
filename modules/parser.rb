@@ -9,7 +9,7 @@ module Parser
 
   def show_posts page = 0 # Show posts on page
     posts = []
-    for post in @archive
+    for post in @actual_pages
       posts.push parse post
     end 
     posts
