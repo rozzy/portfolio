@@ -1,5 +1,5 @@
-module Methods
-  def set_title title = "Blog"
+module Parser
+  def set_title title = "Blog" # Set the title of the page
     @title = title
   end
 
@@ -18,6 +18,9 @@ module Methods
     posts
   end
 
+  # Parse post's metadata and content
+  #
+  #
   def parse post
     data = Hash.new
     data[:url] = File.basename(post).strip().sub(" ", "-")

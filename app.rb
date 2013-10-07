@@ -14,10 +14,10 @@ configure do
   set :views, Proc.new { File.join(root, "views/") }
   set :public_folder, Proc.new { File.join(root, "public") }
   
-  set :styles, "styles/"
-  set :scripts, "scripts/"
-  set :posts, "posts/"
-  set :helpers, "helpers/"
+  set :styles, Proc.new { File.join(root, "styles/") }
+  set :scripts, Proc.new { File.join(root, "scripts/") }
+  set :posts, Proc.new { File.join(root, "posts/") }
+  set :helpers, Proc.new { File.join(root, "helpers/") }
   set :per_page, 5
   set :show_full_post, true
 
@@ -38,7 +38,7 @@ end
 Dir["#{settings.helpers}*.rb"].each {|file| require_relative settings.helpers + File.basename(file, ".rb")}
 
 class Blog < Sinatra::Application
-  include Methods
+  include Parser
 
   get '/' do
     @page = 1
