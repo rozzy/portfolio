@@ -1,0 +1,12 @@
+doctype html
+html
+    head
+        == slim :meta
+        title 
+            |NN | 
+            == @title ? @title : "Blog"
+
+        link rel="stylesheet" href="/main.css"
+        script src="/script.js"
+    body
+        == yield
