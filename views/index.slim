@@ -1,5 +1,15 @@
 - setTitle 'Blog'
 
-== showPosts @page
+- posts = showPosts(@page)
+- for item in posts
+    == item[:time]
+    br
+    == item[:meta]["title"]
+    br
+    == item[:content]
+    br
+    == item[:meta]["tags"]
+    br
+    br
 
 == showPages @page
