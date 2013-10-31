@@ -29,7 +29,7 @@ table {
 
 caption, th, td {
     text-align: left;
-    font-weight: 400;
+    font-weight: normal;
     vertical-align: middle
 }
 
@@ -43,7 +43,7 @@ q:before, q:after, blockquote:before, blockquote:after {
 }
 
 a img {
-    border: 0
+    border: none
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup,
@@ -56,7 +56,7 @@ a, a:hover, a:visited {
 }
 
 strong {
-    font-weight: 700
+    font-weight: bold
 }
 
 html, body {
@@ -120,13 +120,19 @@ a.button {
     font-size: 14px;
     border: 1px solid #eff3f7;
     margin-bottom: 3px;
-    outline: 0;
+    outline: none;
     text-decoration: none;
     background: #d1e1f4 url(button.png) no-repeat;
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
-    transition: all .5s ease-out
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (min--moz-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3) {
+    a.button {
+        background-image: url(button@2x.png)
+    }
 }
 
 a.button span {
@@ -134,7 +140,14 @@ a.button span {
     margin-top: 10px;
     margin-left: 15px;
     padding-left: 20px;
-    color: inherit
+    color: inherit;
+    background: url(icons.png) no-repeat
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (min--moz-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3) {
+    a.button span {
+        background-image: url(icons@2x.png)
+    }
 }
 
 a.button:hover, a.button:focus {
@@ -142,11 +155,11 @@ a.button:hover, a.button:focus {
 }
 
 a.button.blog span {
-    background: url(icons.png) 0 1px no-repeat
+    background-position: 0 1px
 }
 
 a.button.email span {
-    background: url(icons.png) 1px -22px no-repeat
+    background-position: 1px -22px
 }
 
 a.button.github {
@@ -155,7 +168,7 @@ a.button.github {
 }
 
 a.button.github span {
-    background: url(icons.png) 1px -49px no-repeat
+    background-position: 1px -49px
 }
 
 a.button.github:hover, a.button.github:focus {
@@ -168,7 +181,7 @@ a.button.dribbble {
 }
 
 a.button.dribbble span {
-    background: url(icons.png) 0 -70px no-repeat
+    background-position: 0 -70px
 }
 
 a.button.dribbble:hover, a.button.dribbble:focus {
@@ -181,7 +194,7 @@ a.button.soundcloud {
 }
 
 a.button.soundcloud span {
-    background: url(icons.png) -3px -90px no-repeat
+    background-position: -3px -90px
 }
 
 a.button.soundcloud:hover, a.button.soundcloud:focus {
@@ -194,7 +207,7 @@ a.button.twitter {
 }
 
 a.button.twitter span {
-    background: url(icons.png) 0 -109px no-repeat
+    background-position: 0 -109px
 }
 
 a.button.twitter:hover, a.button.twitter:focus {
@@ -207,7 +220,7 @@ a.button.instagram {
 }
 
 a.button.instagram span {
-    background: url(icons.png) 0 -128px no-repeat
+    background-position: 0 -128px
 }
 
 a.button.instagram:hover, a.button.instagram:focus {
@@ -220,7 +233,7 @@ a.button.lastfm {
 }
 
 a.button.lastfm span {
-    background: url(icons.png) 0 -148px no-repeat
+    background-position: 0 -148px
 }
 
 a.button.lastfm:hover, a.button.lastfm:focus {
@@ -233,7 +246,7 @@ a.button.tumblr {
 }
 
 a.button.tumblr span {
-    background: url(icons.png) 0 -170px no-repeat
+    background-position: 0 -170px
 }
 
 a.button.tumblr:hover, a.button.tumblr:focus {
@@ -246,7 +259,7 @@ a.button.pinterest {
 }
 
 a.button.pinterest span {
-    background: url(icons.png) 0 -196px no-repeat
+    background-position: 0 -196px
 }
 
 a.button.pinterest:hover, a.button.pinterest:focus {
