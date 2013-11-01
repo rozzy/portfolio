@@ -116,6 +116,9 @@ html, body {
     width: 210px
 }
 
+.blc {
+    margin-bottom: 20px
+}
 
 a.button {
     width: 243px;
@@ -127,16 +130,15 @@ a.button {
     margin-bottom: 3px;
     outline: none;
     text-decoration: none;
-    border: none;
+    border: 1px solid #eff3f7;
+    -webkit-box-shadow: inset 0 0 0 1px #eff3f7;
+    -moz-box-shadow: inset 0 0 0 1px #eff3f7;
+    box-shadow: inset 0 0 0 1px #eff3f7;
     background: #d1e1f4 url(button.png) no-repeat;
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out
-}
-
-.blc {
-    margin-bottom: 20px
 }
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
