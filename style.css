@@ -131,9 +131,6 @@ a.button {
     outline: none;
     text-decoration: none;
     border: none;
-    /*-webkit-box-shadow: inset 0 0 0 2px green, 0 0 0 2px yellow;
-    -moz-box-shadow: inset 0 0 0 2px green, 0 0 0 2px yellow;
-    box-shadow: inset 0 0 0 2px green, 0 0 0 2px yellow;*/
     background: #d1e1f4 url(button.png) no-repeat;
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
