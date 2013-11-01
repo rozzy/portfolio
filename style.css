@@ -71,7 +71,8 @@ html, body {
   @media (max-width: 568px) and (max-device-width: 568px) {
     .container {
       width: 300px;
-      margin-top: 50px; } }
+      margin-top: 50px;
+      text-align: center; } }
   .container h1 {
     font-size: 32px;
     margin-bottom: 5px; }
@@ -92,17 +93,14 @@ html, body {
       .container div.userpic {
         float: none;
         display: block;
-        margin-left: 45px;
+        margin: 0 auto;
         margin-bottom: 25px; } }
   .container .main_links {
     margin: 10px 0; }
 
-@media (max-width: 568px) and (max-device-width: 568px) {
-  .info {
-    margin-left: 45px; } }
-
 .left_s {
-  margin-left: 92px; }
+  margin-left: 92px;
+  clear: both; }
   @media (max-width: 568px) and (max-device-width: 568px) {
     .left_s {
       margin-left: 45px; } }
@@ -134,23 +132,27 @@ a.button {
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out; }
+  @media (max-width: 568px) and (max-device-width: 568px) {
+    a.button {
+      text-align: center; } }
   @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
     a.button {
       background-image: url(button@2x.png);
       background-size: 243px 34px; } }
+  a.button:hover, a.button:focus {
+    background-color: #2d7ddc; }
   a.button span {
-    display: block;
+    display: inline-block;
+    margin: 0 auto;
     margin-top: 10px;
-    margin-left: 15px;
     padding-left: 20px;
+    margin-left: 15px;
     color: inherit;
     background: url(icons.png) no-repeat; }
     @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
       a.button span {
         background-image: url(icons@2x.png);
         background-size: 19px 211px; } }
-  a.button:hover, a.button:focus {
-    background-color: #2d7ddc; }
   a.button.blog span {
     background-position: 0 1px; }
   a.button.email span {
