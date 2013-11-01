@@ -130,6 +130,9 @@ a.button {
     margin-bottom: 3px;
     outline: none;
     text-decoration: none;
+    -webkit-box-shadow: 0 0 0 3px #fff;
+    -moz-box-shadow: 0 0 0 3px #fff;
+    box-shadow: 0 0 0 3px #fff;
     background: #d1e1f4 url(button.png) no-repeat;
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
