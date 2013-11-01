@@ -139,7 +139,7 @@ a.button {
     a.button {
       background-image: url(button@2x.png);
       background-size: 243px 34px; } }
-  a.button:hover, a.button:focus {
+  a.button:hover, a.button:focus, a.button:active {
     background-color: #2d7ddc; }
   a.button span {
     display: inline-block;
@@ -162,55 +162,57 @@ a.button {
     background-color: #d4d8dd; }
     a.button.github span {
       background-position: 1px -49px; }
-    a.button.github:hover, a.button.github:focus {
+    a.button.github:hover, a.button.github:focus, a.button.github:active {
       background-color: #414141; }
   a.button.dribbble {
     color: #e93277;
     background-color: #edd9e8; }
     a.button.dribbble span {
       background-position: 0 -70px; }
-    a.button.dribbble:hover, a.button.dribbble:focus {
+    a.button.dribbble:hover, a.button.dribbble:focus, a.button.dribbble:active {
       background-color: #e93277; }
   a.button.soundcloud {
     color: #ff7700;
     background-color: #f0dcd4; }
     a.button.soundcloud span {
-      margin-left: 5px;
       background-position: -3px -90px; }
-    a.button.soundcloud:hover, a.button.soundcloud:focus {
+      @media (max-width: 568px) and (max-device-width: 568px) {
+        a.button.soundcloud span {
+          margin-left: 5px; } }
+    a.button.soundcloud:hover, a.button.soundcloud:focus, a.button.soundcloud:active {
       background-color: #ff7700; }
   a.button.twitter {
     color: #0093c7;
     background-color: #cae4f1; }
     a.button.twitter span {
       background-position: 0 -109px; }
-    a.button.twitter:hover, a.button.twitter:focus {
+    a.button.twitter:hover, a.button.twitter:focus, a.button.twitter:active {
       background-color: #0093c7; }
   a.button.instagram {
     color: #7a461e;
     background-color: #dcd8d8; }
     a.button.instagram span {
       background-position: 0 -128px; }
-    a.button.instagram:hover, a.button.instagram:focus {
+    a.button.instagram:hover, a.button.instagram:focus, a.button.instagram:active {
       background-color: #7a461e; }
   a.button.lastfm {
     color: #de001e;
     background-color: #ebced7; }
     a.button.lastfm span {
       background-position: 0 -148px; }
-    a.button.lastfm:hover, a.button.lastfm:focus {
+    a.button.lastfm:hover, a.button.lastfm:focus, a.button.lastfm:active {
       background-color: #de001e; }
   a.button.tumblr {
     color: #3373a9;
     background-color: #d2dfec; }
     a.button.tumblr span {
       background-position: 0 -170px; }
-    a.button.tumblr:hover, a.button.tumblr:focus {
+    a.button.tumblr:hover, a.button.tumblr:focus, a.button.tumblr:active {
       background-color: #3373a9; }
   a.button.pinterest {
     color: #c4001f;
     background-color: #e7ced8; }
     a.button.pinterest span {
       background-position: 0 -196px; }
-    a.button.pinterest:hover, a.button.pinterest:focus {
+    a.button.pinterest:hover, a.button.pinterest:focus, a.button.pinterest:active {
       background-color: #c4001f; }
