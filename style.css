@@ -103,7 +103,7 @@ html, body {
   clear: both; }
   @media (max-width: 568px) and (max-device-width: 568px) {
     .left_s {
-      margin-left: 45px; } }
+      margin-left: 40px; } }
   .left_s p.descr {
     width: 230px;
     font-size: 14px;
@@ -175,6 +175,7 @@ a.button {
     color: #ff7700;
     background-color: #f0dcd4; }
     a.button.soundcloud span {
+      margin-left: 5px;
       background-position: -3px -90px; }
     a.button.soundcloud:hover, a.button.soundcloud:focus {
       background-color: #ff7700; }
