@@ -87,7 +87,7 @@ html, body {
     background: url(userpic.png) no-repeat; }
     @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
       .container div.userpic {
-        background-url: url(userpic@2x.png);
+        background-image: url(userpic@2x.png);
         background-size: 74px 74px; } }
     @media (max-width: 568px) and (max-device-width: 568px) {
       .container div.userpic {
